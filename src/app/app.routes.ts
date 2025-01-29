@@ -7,7 +7,17 @@ export const routes: Routes = [
     path: '', component: MainComponent,
     children: [
       {
-        path: 'home', loadChildren: () => import('./pages/home.module').then(d => d.HomeModule)
+        path: '',
+        redirectTo: 'home',
+        pathMatch: 'full'
+      },
+      {
+        path: 'home',
+        loadComponent: () => import('./pages/home/home.component').then(d => d.HomeComponent)
+      },
+      {
+        path: 'login',
+        loadComponent: () => import('./pages/login/login.component').then(d => d.LoginComponent)
       }
     ]
   }

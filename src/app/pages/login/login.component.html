@@ -1,1 +1,13 @@
-<p>login works!</p>
+<div class="card flex justify-center">
+  <p-button label="Check" />
+</div>
+
+<div class="card flex justify-center">
+  <p-colorpicker [(ngModel)]="color" (ngModelChange)="cambiarTem()" />
+</div>
+
+
+<div [style]="'background-color:' + color + '; padding: 1rem' ">
+  <p>Login Componente</p>
+</div>
+

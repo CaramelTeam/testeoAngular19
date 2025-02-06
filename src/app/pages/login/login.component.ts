@@ -17,13 +17,17 @@ export class LoginComponent {
 
 
   colorTopBar: string | null = 'white';
-  nuevoTextoTopBar: string | null = 'black';
+  nuevoTextoTopBar: string | null = 'red';
 
   cambiarTemaTopBar(){
-    // const nuevoFondo = document.documentElement.style.getPropertyValue('--color-fondo') === 'white' ? 'black' : 'white';
-    // const nuevoTexto = nuevoFondo === 'white' ? 'black' : 'white';
-
     document.documentElement.style.setProperty('--color-fondo-TopBar', this.colorTopBar);
     document.documentElement.style.setProperty('--color-texto-TopBar', this.nuevoTextoTopBar);
+  }
+
+  colorLogin: string | null = 'white';
+  nuevoTextoLogin: string | null = 'red';
+  cambiarTemaLogin(){
+    document.documentElement.style.setProperty('--color-fondo-Login', this.colorLogin);
+    document.documentElement.style.setProperty('--color-texto-Login', this.nuevoTextoLogin);
   }
 }

@@ -16,13 +16,14 @@ import { FormsModule } from '@angular/forms';
 export class LoginComponent {
 
 
-  color: string | null = null;
+  colorTopBar: string | null = 'white';
+  nuevoTextoTopBar: string | null = 'black';
 
-  cambiarTem(){
-    const nuevoFondo = document.documentElement.style.getPropertyValue('--color-fondo') === 'white' ? 'black' : 'white';
-    const nuevoTexto = nuevoFondo === 'white' ? 'black' : 'white';
+  cambiarTemaTopBar(){
+    // const nuevoFondo = document.documentElement.style.getPropertyValue('--color-fondo') === 'white' ? 'black' : 'white';
+    // const nuevoTexto = nuevoFondo === 'white' ? 'black' : 'white';
 
-    document.documentElement.style.setProperty('--color-fondo', this.color);
-    document.documentElement.style.setProperty('--color-texto', nuevoTexto);
+    document.documentElement.style.setProperty('--color-fondo-TopBar', this.colorTopBar);
+    document.documentElement.style.setProperty('--color-texto-TopBar', this.nuevoTextoTopBar);
   }
 }

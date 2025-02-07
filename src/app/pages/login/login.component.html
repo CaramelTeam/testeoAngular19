@@ -8,10 +8,12 @@
     <div style="display: flex; align-items: center; gap: .5rem">
       <p>Fondo Top Bar</p>
       <p-colorpicker [(ngModel)]="colorTopBar" (ngModelChange)="cambiarTemaTopBar()" />
+      <input type="text" pInputText [(ngModel)]="colorTopBar"  (ngModelChange)="cambiarTemaTopBar()" />
     </div>
     <div style="display: flex; align-items: center; gap: .5rem">
       <p>Texto Top Bar</p>
       <p-colorpicker [(ngModel)]="nuevoTextoTopBar" (ngModelChange)="cambiarTemaTopBar()" />
+      <input type="text" pInputText [(ngModel)]="nuevoTextoTopBar" (ngModelChange)="cambiarTemaTopBar()" />
     </div>
   </div>
 
@@ -20,10 +22,12 @@
     <div style="display: flex; align-items: center; gap: .5rem">
       <p>Fondo Login</p>
       <p-colorpicker [(ngModel)]="colorLogin" (ngModelChange)="cambiarTemaLogin()" />
+      <input type="text" pInputText [(ngModel)]="colorLogin" (ngModelChange)="cambiarTemaLogin()"/>
     </div>
     <div style="display: flex; align-items: center; gap: .5rem">
       <p>Texto Login</p>
       <p-colorpicker [(ngModel)]="nuevoTextoLogin" (ngModelChange)="cambiarTemaLogin()" />
+      <input type="text" pInputText [(ngModel)]="nuevoTextoLogin" (ngModelChange)="cambiarTemaLogin()" />
     </div>
   </div>
 

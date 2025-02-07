@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+@import "primeicons/primeicons.css";
+
+
 :root {
   --color-fondo-TopBar: white;
   --color-texto-TopBar: black;
@@ -6,4 +9,6 @@
 
   --color-fondo-Login: white;
   --color-texto-Login: black;
+
+  --color-texto-Slider: black;
 }

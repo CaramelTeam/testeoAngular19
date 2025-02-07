@@ -2,6 +2,12 @@
   <h5>Login Componente</h5>
 </div>
 
+<div style="display: flex; justify-content: center; align-items: center;">
+  <button pButton pRipple severity="success" [routerLink]="['/home']" >
+    <span pButtonLabel>Go to Home</span>
+  </button>
+</div>
+
 <div class="styleSetting">
   <p>Top bar settings</p>
   <div style="display: flex; flex-direction: row; justify-content: center; gap: 2rem;">
@@ -28,6 +34,29 @@
       <p>Texto Login</p>
       <p-colorpicker [(ngModel)]="nuevoTextoLogin" (ngModelChange)="cambiarTemaLogin()" />
       <input type="text" pInputText [(ngModel)]="nuevoTextoLogin" (ngModelChange)="cambiarTemaLogin()" />
+    </div>
+  </div>
+
+
+  <p>Slider Bar </p>
+  <div style="display: flex; flex-direction: row; justify-content: center; gap: 2rem;">
+    <div style="display: flex; align-items: center; gap: .5rem">
+      <p>Fondo Slider</p>
+      <p-colorpicker [(ngModel)]="colorSlider" (ngModelChange)="cambiarTemaSider()" />
+      <input type="text" pInputText [(ngModel)]="colorSlider" (ngModelChange)="cambiarTemaSider()"/>
+    </div>
+    <div style="display: flex; align-items: center; gap: .5rem">
+      <p>Texto Slider</p>
+      <p-colorpicker [(ngModel)]="nuevoTextoSlider" (ngModelChange)="cambiarTemaSider()" />
+      <input type="text" pInputText [(ngModel)]="nuevoTextoSlider" (ngModelChange)="cambiarTemaSider()" />
+    </div>
+    <div style="display: flex; align-items: center; gap: .5rem">
+      <p>Tittle Slider</p>
+      <p-colorpicker [(ngModel)]="titleSlider" (ngModelChange)="cambiarTemaSider()" />
+      <input type="text" pInputText [(ngModel)]="titleSlider" (ngModelChange)="cambiarTemaSider()" />
+    </div>
+    <div>
+      <p-button icon="pi pi-eye" class="btn-View" (click)="this.layoutServ.sliderView == true"></p-button>
     </div>
   </div>
 

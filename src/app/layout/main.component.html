@@ -1,5 +1,10 @@
-<div>
+<div style="display: flex; align-items: center; gap: 2rem;">
   <p>Layout Theme</p>
+  <div>
+    <p-button (click)="this.layoutServ.sliderView = true" icon="pi pi-arrow-right" />
+  </div>
+
 </div>
 
+<app-slide-bar></app-slide-bar>
 <router-outlet></router-outlet>

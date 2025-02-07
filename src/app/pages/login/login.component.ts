@@ -3,6 +3,11 @@ import { ButtonModule } from 'primeng/button';
 import { ColorPickerModule } from 'primeng/colorpicker';
 import { FormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
+import { LayoutService } from '../../layout/layout.service';
+
+import { RouterModule } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-login',
@@ -12,10 +17,13 @@ import { InputTextModule } from 'primeng/inputtext';
     ButtonModule,
     ColorPickerModule,
     FormsModule,
-    InputTextModule
+    InputTextModule,
+    RouterModule
   ],
 })
 export class LoginComponent implements OnInit {
+
+  constructor(public layoutServ: LayoutService){}
 
   ngOnInit(): void {
     this.cambiarTemaTopBar();
@@ -35,5 +43,14 @@ export class LoginComponent implements OnInit {
   cambiarTemaLogin(){
     document.documentElement.style.setProperty('--color-fondo-Login', this.colorLogin);
     document.documentElement.style.setProperty('--color-texto-Login', this.nuevoTextoLogin);
+  }
+
+  colorSlider: string | null = 'white';
+  nuevoTextoSlider: string | null = 'red';
+  titleSlider: string | null = null;
+  cambiarTemaSider(){
+    document.documentElement.style.setProperty('--color-texto-Slider', this.nuevoTextoSlider);
+    document.documentElement.style.setProperty('--p-drawer-background', this.colorSlider);
+    document.documentElement.style.setProperty('--p-drawer-color', this.titleSlider);
   }
 }
